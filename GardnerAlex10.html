@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html lang= "en-us">
+<head>
+<meta charset="utf-8">
+<title>The Arrays</title>
+<script type="text/JavaScript">
+function mothersDay(){
+var list = [1908, 5, 10];
+var end = '';
+for(i = 0; i <= list.length - 1; i++){
+end += list[i];
+if(i < list.length - 1){
+end += ', ';
+}
+
+}
+document.getElementById('output').innerHTML = end;
+}
+function a(){
+var b = [1, 2, 3, 4];
+var a = addEnds(b);
+function addEnds(list){
+var a;
+a = list[0] + list[list.length - 1];
+document.getElementById('output2').innerHTML = a;
+}
+}
+function b(){
+var a = [0, 2, 5, 3, 10];
+var b = 10;
+var c = multiply(a, b);
+document.getElementById('output3').innerHTML = c;
+}
+function multiply(list, multiplier){
+var end = '';
+for(i = 0; i < list.length; i++){
+list[i] *= multiplier;
+end += list[i];
+if(i < list.length - 1){
+end += ', ';
+}
+
+}
+return end;
+}
+
+function c(){
+var a = parseFloat(document.getElementById('input').value);
+var b = getDiscountedAmount(a);
+document.getElementById('output4').innerHTML = b;
+}
+function getDiscountedAmount(purchase){
+var limits = [300, 600, 900];
+var rates = [0, 0.02, 0.025, 0.03];
+for(var i = 0; i < limits.length; ++i){
+if(purchase < limits[i]){
+break;
+}
+}
+var rates = rates[i];
+var discount = purchase * rates;
+return purchase - discount;
+}
+
+</script>
+</head>
+<body>
+<button type="button" onclick="mothersDay()">
+MothersDay</button>
+<div id="output"></div><br>
+<button type="button" onclick="a()">
+Add</button>
+<div id="output2"></div><br>
+<button type="button" onclick="b()">
+multiply</button>
+<div id="output3"></div><br>
+Enter Purchase:
+<input type="text" id="input"><br>
+<button type="button" onclick="c()">
+discount</button>
+<div id="output4"></div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang= "en-us">
+<head>
+<meta charset="utf-8">
+<title>Get User Input from a Form</title>
+<script type="text/JavaScript">
+function getInput(){
+//Get the text field where the user entered data.
+var field = document.getElementById('rate');
+
+//Get the user's input as a string
+//of text from the text field.
+var input = field.value;
+
+//Parse a number from the text input by the user.
+var number = parseInt(input);
+
+//Display the number.
+document.getElementById('output').innerHTML = number;
+}
+</script>
+</head>
+<body>
+Please enter a number: <input type="text" id="rate">
+<button type="button" onclick="getInput()"> Show Input</button>
+<div id="output"></div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang= "en-us">
+<head>
+<meta charset="utf-8">
+<title>The Odd Ones</title>
+<script type="text/JavaScript">
+//I= number
+//P= i < n; i++. i % 2 != 0. b += i.
+//O= odd number sum
+function convert(){
+var n = parseFloat(document.getElementById('number').value);
+var b = 0;
+for(var i = 2; i < n; i++){
+ if(i % 2 != 0){
+ b += i;
+ }
+
+}
+document.getElementById('output').innerHTML = b;
+}
+</script>
+</head>
+<body>
+Please enter a number:
+<input type="text" id="number"><br>
+<button type="button" onclick="convert()">
+Make table</button><br>
+<div id="output"></div>
+</body>
+</html>

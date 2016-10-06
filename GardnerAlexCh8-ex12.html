@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang= "en-us">
+<head>
+<meta charset="utf-8">
+<title>The Example 12</title>
+<script type="text/JavaScript">
+//I= balance, annualRate, months
+//P= balance * monthlyrate = interest. balance + interest
+//O= total
+function convert(){
+var balance = parseFloat(document.getElementById('balance').value);
+var annualRate = parseFloat(document.getElementById('annualRate').value);
+var numMonths = parseFloat(document.getElementById('months').value);
+var monthlyRate = annualRate / 12;
+for(var month = 1; month <= numMonths; month++){
+var interest = balance * monthlyRate;
+interest = Math.round(interest * 100) / 100;
+balance += interest;
+}
+document.getElementById('output').innerHTML = "Your balance after " + numMonths + " months will be $" + balance;
+}
+</script>
+</head>
+<body>
+Please enter balance:
+<input type="text" id="balance"><br>
+Please enter annual rate:
+<input type="text" id="annualRate"><br>
+Please enter months:
+<input type="text" id="months"><br>
+<button type="button" onclick="convert()">
+Compute</button><br>
+<div id="output"></div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang= "en-us">
+<head>
+<meta charset="utf-8">
+<title>The Subtotal</title>
+<script type="text/JavaScript">
+//I= button click
+//P= var i = 1; i <= 12; i++, "5 x " + i +" = " + 5 * i 
+//O= times tables
+function convert(){
+var output2 = "";
+for(var i = 1; i <= 12; i++){
+output2 += "5 x " + i +" = " + 5 * i + "\n";
+}
+document.getElementById('output').value = output2;
+}
+</script>
+</head>
+<body>
+
+<button type="button" onclick="convert()">
+Make table</button><br>
+<textarea rows = "13" cols = "40" id="output"></textarea>
+</body>
+</html>

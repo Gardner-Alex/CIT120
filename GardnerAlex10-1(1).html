@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang= "en-us">
+<head>
+<meta charset="utf-8">
+<title>The Array</title>
+<script type="text/JavaScript">
+function mothersDay(){
+var list = [1908, 5, 10];
+var end = '';
+for(i = 0; i <= list.length - 1; i++){
+end += list[i];
+if(i < list.length - 1){
+end += ', ';
+}
+
+}
+document.getElementById('output').innerHTML = end;
+}
+
+</script>
+</head>
+<body>
+
+<button type="button" onclick="mothersDay()">
+MothersDay</button>
+<div id="output"></div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang= "en-us">
+<head>
+<meta charset="utf-8">
+<title>The Power</title>
+<script type="text/JavaScript">
+
+function intPow(){
+var a = 0;
+var base = parseFloat(document.getElementById('base').value);
+var exp = parseFloat(document.getElementById('exp').value);
+for(i = 1; i <= exp; i++){
+base *= base;
+}
+document.getElementById('output').innerHTML = base;
+}
+
+</script>
+</head>
+<body>
+Input base:
+<input type="text" id="base"><br>
+Input Exponent:
+<input type="text" id="exp"><br>
+<button type="button" onclick="intPow()">
+power</button>
+<div id="output"></div>
+</body>
+</html>

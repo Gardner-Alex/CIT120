@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang= "en-us">
+<head>
+<meta charset="utf-8">
+<title>The Odd Ones</title>
+<script type="text/JavaScript">
+
+function convert(){
+var pa = pyramidSurfaceArea(8, 7);
+document.getElementById('output').innerHTML = pa;
+
+function pyramidSurfaceArea(base, height){
+var edge = Math.sqrt(base * base / 2 + height * height);
+var triArea = triangleArea(base, edge, edge);
+var pyramidArea = 4 * triArea;
+return pyramidArea;
+}
+function triangleArea(a, b, c){
+var s = (a + b + c) / 2;
+var area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+return area;
+}
+}
+</script>
+</head>
+<body>
+
+<button type="button" onclick="convert()">
+compute</button><br>
+<div id="output"></div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang= "en-us">
+<head>
+<meta charset="utf-8">
+<title>The Array</title>
+<script type="text/JavaScript">
+function filler(){
+var list = new Array(4);
+var x = 8.3;
+var total = fill(list, x);
+document.getElementById('output').innerHTML = total;
+}
+function fill(list, x){
+var total = "";
+for(var i = 0; i < list.length; ++i){
+list[i] = x;
+total += list[i] + "\t";
+}
+return total;
+}
+
+</script>
+</head>
+<body>
+<button type="button" onclick="filler()">
+Fill Numbers</button>
+<div id="output"></div>
+</body>
+</html>

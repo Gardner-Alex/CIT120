@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang= "en-us">
+<head>
+<meta charset="utf-8">
+<title>The Power</title>
+<script type="text/JavaScript">
+//I= button click
+//P= i = 0; i <= 31; 1++.  
+//O= powers of 2
+function convert(){
+
+var a = "";
+for(var i = 0; i <= 31; i++){
+ a += Math.pow(2,i);
+ if(i !== 31){
+ a += ", "
+ }
+}
+document.getElementById('output').innerHTML = a;
+}
+</script>
+</head>
+<body>
+<button type="button" onclick="convert()">
+Power of 2</button><br>
+<div id="output"></div>
+</body>
+</html>

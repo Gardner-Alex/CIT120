@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang= "en-us">
+<head>
+<meta charset="utf-8">
+<title>The Multiplying Array</title>
+<script type="text/JavaScript">
+function b(){
+var a = [0, 2, 5, 3, 10];
+var b = 10;
+var c = multiply(a, b);
+document.getElementById('output').innerHTML = c;
+}
+function multiply(list, multiplier){
+var end = '';
+for(i = 0; i < list.length; i++){
+list[i] *= multiplier;
+end += list[i];
+if(i < list.length - 1){
+end += ', ';
+}
+
+}
+return end;
+}
+
+</script>
+</head>
+<body>
+<button type="button" onclick="b()">
+multiply</button>
+<div id="output"></div>
+
+</body>
+</html>

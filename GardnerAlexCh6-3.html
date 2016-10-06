@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang= "en-us">
+<head>
+<meta charset="utf-8">
+<title>The Math</title>
+<script type="text/JavaScript">
+//I= n1, n2, op, guess
+//P= recieve n1, n2, op, quess.  determine output. calculate answers. compare guess with answer.
+//O= correct or incorrect
+
+
+function mather(){
+var input = document.getElementById('first');
+var a = parseFloat(input.value);
+var input2 = document.getElementById('second');
+var b = parseFloat(input2.value);
+var c = document.getElementById('operator').value;
+var input4 = document.getElementById('guess');
+var d = parseFloat(input4.value);
+var e;
+var answer;
+
+if(c == "+"){
+e = a + b;
+}
+else if(c == "-"){
+e = a - b;
+}
+else if(c == "/"){
+e = a / b;
+}
+else if(c == "*"){
+e = a * b;
+}
+else{
+answer = "incorrect operator";
+}
+if(answer == "incorrect operator"){
+document.getElementById('results').innerHTML = answer;
+}
+else{
+if(e == d){
+document.getElementById('results').innerHTML = "Correct";
+}
+else{
+document.getElementById('results').innerHTML = "Incorrect";
+}
+}
+
+}
+</script>
+</head>
+<body>
+<h1>TEST YOUR MATH SKILLS!</h1>
+ <input type="text" id="first">
+ <input type="text" id="operator">
+ <input type="text" id="second"> = 
+ <input type="text" id="guess">
+<button type="button" onclick="mather()">
+Total</button>
+<div id="results"> </div>
+</body>
+</html>

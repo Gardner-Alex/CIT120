@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang= "en-us">
+<head>
+<meta charset="utf-8">
+<title>The Schooling</title>
+<script type="text/JavaScript">
+//I= credits
+//P= 0>= freshman <30>= sophomore <60>= junior <90>= senior.  
+//O= year in school
+function convert(){
+var input = document.getElementById('input');
+var b = parseFloat(input.value);
+var a;
+if( b <30 && b >= 0){
+a = 'freshman';
+}
+else if(b < 60 && b >= 30){
+a = 'sophomore';
+}
+else if(b < 90 && b >= 60){
+a = 'junior';
+}
+else if(b >= 90){
+a = 'senior';
+}
+else{
+a = 'Incorrect input';
+}
+document.getElementById('output').innerHTML = a;
+}
+</script>
+</head>
+<body>
+Please enter credits: <input type="text" id="input">
+<button type="button" onclick="convert()">
+Total</button>
+<div id="output"></div>
+</body>
+</html>

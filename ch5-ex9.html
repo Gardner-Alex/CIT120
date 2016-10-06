@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html lang= "en-us">
+<head>
+<meta charset="utf-8">
+<title>The Converter</title>
+<script type="text/JavaScript">
+function celsToFahr(){
+var text = document.getElementById('celsius').value;
+var celsius = parseFloat(text);
+var fahren = celsius * 9 / 5 + 32;
+document.getElementById('fahren').innerHTML = fahren;
+}
+</script>
+</head>
+<body>
+Please enter celcius: <input type="text" id="celsius">
+<button type="button" onclick="celsToFahr()">
+Convert</button>
+<div id="fahren"></div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>My First JavaScript Program</title>
+
+<script type="text/JavaScript">
+	// The next line of code causes the computer
+	// to open a popup window that contains the
+	// words "JavaScript is great!".
+	window.alert('JavaScript is great!');
+	var fullname = window.prompt("Please enter your fullname");
+		
+function sayHello() {
+	// This line prompts the user to type in his name.
+	
+	// The next line causes the computer to display the
+	// user's name in a text field in the formHello form.
+	var firstname = document.formHello.firstname.value;
+	window.alert('Hello ' + 'with a full name of ' + fullname + ' but with a first name of ' + firstname);
+	
+	var aliasname = document.formHello.aliasname.value;
+		
+	// The next line causes the computer to display the
+	// user's alias name in a textarea field in the formHello form.	
+	document.formHello.name.value = aliasname;	
+}
+
+</script>
+
+</head>
+
+<body>
+
+	<form name="formHello">
+    First Name: <input type="text" name="firstname" size="30"><br>
+    Alias Name: <input type="text" name="aliasname" size="30"><br>
+    
+	<button type="button" onclick="sayHello()"> Display Names</button><br><br>	
+    Alias Name Output: <input type="text" name="name" size="30">    
+    </form>
+    
+       
+</body>
+</html>

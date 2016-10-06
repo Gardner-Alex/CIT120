@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang= "en-us">
+<head>
+<meta charset="utf-8">
+<title>The Days</title>
+<script type="text/JavaScript">
+//I= month,name
+//P= evaluate if month == February, days = 28 or 29, else if month == april or days == 30 or days == 31
+//O= number of days in month
+function convert(){
+var input = document.getElementById('name').value;
+var days;
+if(input == 'January'){
+days = '31';
+}else if(input == 'March'){
+days = '31';
+}else if(input == 'May'){
+days = '31';
+}else if(input == 'July'){
+days = '31';
+}else if(input == 'August'){
+days = '31';
+}else if(input == 'October'){
+days = '31';
+}else if(input == 'December'){
+days = '31';
+}else if(input == 'April'){
+days = '30';
+}else if(input == 'June'){
+days = '30';
+}else if(input == 'September'){
+days = '30';
+}else if(input == 'November'){
+days = '30';
+}else if (input == 'February'){
+days = '28 or 29';
+}else{
+days = 'Incorrect value';
+}
+
+document.getElementById('output').innerHTML = days;
+}
+</script>
+</head>
+<body>
+Enter a month name: <input type="text" id="name">
+<button type="button" onclick="convert()">Days</button>
+<div id="output"></div>
+</body>
+</html>

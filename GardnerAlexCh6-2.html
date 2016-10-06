@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang= "en-us">
+<head>
+<meta charset="utf-8">
+<title>The FOOTWEAR</title>
+<script type="text/JavaScript">
+
+//I= weather
+//P= what weather matches which shoe
+//O= footwear
+
+function convert(){
+var a = document.getElementById('weather').value;
+ var shoe;
+if(a == "hot"){
+shoe = "sandals";
+}
+else if(a == "rain"){
+shoe = "galoshes";
+}
+else if(a == "snow"){
+shoe = "boots";
+}
+else{
+shoe = "Please enter hot, rain, or snow";
+}
+document.getElementById('output').innerHTML = shoe;
+}
+</script>
+</head>
+<body>
+Please enter weather (hot, rain, snow): <input type="text" id="weather">
+<button type="button" onclick="convert()">
+What Shoe</button>
+<div id="output"></div>
+</body>
+</html>

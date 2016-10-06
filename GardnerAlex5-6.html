@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang= "en-us">
+<head>
+<meta charset="utf-8">
+<title>Actual Money</title>
+<script type="text/JavaScript">
+//Defining table
+//Input = regular hours worked, employees wage
+//processing = regular hours * wage, gross pay - (gross pay * tax(15%)) 
+//Output = employee's pay after tax
+function convert(){
+var text = document.getElementById('hours').value;
+var a = parseFloat(text);
+var text2 = document.getElementById('wage').value;
+var b = parseFloat(text2);
+var c = a * b;
+var d = c * .15;
+c -= d;
+c *= 100;
+c = Math.round(c);
+c /= 100;
+var d = c.toFixed(2);
+document.getElementById('output').innerHTML = "$" + d ;
+}
+</script>
+</head>
+<body>
+Please enter hours worked: <input type="text" id="hours"> <br>
+Please enter wage: <input type="text" id="wage"> <br>
+
+<button type="button" onclick="convert()">
+Convert</button> <br>
+Actual Pay:<div id="output"></div>
+</body>
+</html>

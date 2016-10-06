@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang= "en-us">
+<head>
+<meta charset="utf-8">
+<title>The Discount</title>
+<script type="text/JavaScript">
+
+
+function convert(){
+var cost = document.getElementById('cost').value;
+var a = parseFloat(cost);
+var discount;
+if(cost < 100){
+discount = 0.10;
+}
+else if(cost < 250){
+discount = 0.15;
+}
+else if(cost < 400){
+discount = 0.18;
+}
+else{
+discount = 0.20;
+}
+cost *= (1 - discount);
+cost *= 100;
+cost = Math.round(cost);
+cost /= 100;
+document.getElementById('output').innerHTML = cost;
+}
+</script>
+</head>
+<body>
+Please enter cost: <input type="text" id="cost">
+<button type="button" onclick="convert()">
+Total cost</button>
+<div id="output"></div>
+</body>
+</html>

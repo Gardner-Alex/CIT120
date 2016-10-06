@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang= "en-us">
+<head>
+<meta charset="utf-8">
+<title>The Subtotal</title>
+<script type="text/JavaScript">
+//I= subtotal
+//P= (subtotal > 50 && tuesday or wednesday) - subtotal*.10, subtotal + subtotal*.06
+//O= total
+function convert(){
+var input = document.getElementById('input');
+var a = parseFloat(input.value);
+var day = new Date().getDay();
+if(day == (2 || 3)){
+	if(a > 50){
+a -= a*.1;
+a += a*.06;
+	}else{
+a += a*.06;
+	     }
+}else{
+a += a*.06;
+}
+a *= 100;
+a = Math.round(a);
+a /= 100;
+document.getElementById('output').innerHTML = '$' + a;
+}
+</script>
+</head>
+<body>
+Please enter subtotal: <input type="text" id="input">
+<button type="button" onclick="convert()">
+Total</button>
+<div id="output"></div>
+</body>
+</html>

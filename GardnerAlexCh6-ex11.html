@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang= "en-us">
+<head>
+<meta charset="utf-8">
+<title>The Discount</title>
+<script type="text/JavaScript">
+
+
+function convert(){
+var input = document.getElementById('sales');
+var sales = parseFloat(input.value);
+var rate;
+if(sales < 300){
+rate = 0;
+}
+else if( sales < 600){
+rate = 0.02;
+}
+else if(sales < 1000){
+rate = 0.025;
+}
+else{
+rate = 0.03;
+}
+var commission = sales * rate;
+document.getElementById('commission').innerHTML = 'The employee earned ' + commission;
+}
+</script>
+</head>
+<body>
+Please enter sales: <input type="text" id="sales">
+<button type="button" onclick="convert()">
+Total</button>
+<div id="commission"></div>
+</body>
+</html>

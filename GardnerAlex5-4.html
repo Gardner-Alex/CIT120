@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang= "en-us">
+<head>
+<meta charset="utf-8">
+<title>The Converter</title>
+<script type="text/JavaScript">
+//Defining table
+//Input = beginning mileage, Ending Mileage, Gallons of gas used
+//processing = (Ending Mileage + Beginning Mileage) / gallons of gas used
+//Output = Miles per gallon
+
+function convert(){
+var text = document.getElementById('first').value;
+var a = parseFloat(text);
+var text2 = document.getElementById('last').value;
+var b = parseFloat(text2);
+var text3 = document.getElementById('gas').value;
+var c = parseFloat(text3);
+var d = (b - a) / c;
+
+d *= 100;
+d = Math.round(d);
+d /= 100;
+document.getElementById('output').innerHTML = d + " miles per gallon";
+}
+</script>
+</head>
+<body>
+Please enter beginning miles: <input type="text" id="first">
+Please enter ending miles: <input type="text" id="last">
+Please enter gas used: <input type="text" id="gas">
+<button type="button" onclick="convert()">
+Convert</button>
+<div id="output"></div>
+</body>
+</html>
